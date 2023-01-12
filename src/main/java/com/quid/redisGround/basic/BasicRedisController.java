@@ -20,7 +20,7 @@ public class BasicRedisController {
     private final StringRedisTemplate stringRedisTemplate;
 
     @PostMapping
-    public void set(@RequestBody BasicReq req) {
+    public void set(@RequestBody SetReq req) {
         stringRedisTemplate.opsForValue().set(req.key, req.value);
     }
 
@@ -42,7 +42,7 @@ public class BasicRedisController {
     }
 
     @Data
-    private static class BasicReq{
+    private static class SetReq {
         String key;
         String value;
     }
