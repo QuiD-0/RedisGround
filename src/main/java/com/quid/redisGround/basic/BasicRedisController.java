@@ -43,7 +43,7 @@ public class BasicRedisController {
 
     @Data
     private static class SetReq {
-        String key;
-        String value;
+        private String key;
+        private String value;
     }
 }
