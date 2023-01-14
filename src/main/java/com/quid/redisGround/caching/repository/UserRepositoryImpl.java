@@ -15,8 +15,9 @@ public class UserRepositoryImpl implements UserRepository {
     public UserProfile getUserProfile(String name) {
         return userRedisRepository.getUserProfile(name)
             .orElseGet(() -> {
-                userRedisRepository.saveUserProfile(new UserProfile(name, 20));
-                return userTempRepository.getUserProfile(name);
+                UserProfile userProfile = userTempRepository.getUserProfile(name);
+                userRedisRepository.saveUserProfile(userProfile);
+                return userProfile;
             });
     }
 
