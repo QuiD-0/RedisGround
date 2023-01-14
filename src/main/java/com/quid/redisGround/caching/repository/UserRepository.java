@@ -6,5 +6,6 @@ public interface UserRepository {
 
     UserProfile getUserProfile(String name);
 
+    UserProfile getUserProfileFromTemp(String name);
 }
 

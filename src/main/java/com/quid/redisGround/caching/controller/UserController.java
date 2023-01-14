@@ -15,9 +15,14 @@ public class UserController {
 
     private final UserService userService;
 
-    @GetMapping("/{name}")
+    @GetMapping("/profile/{name}")
     public UserProfile getUserProfile(@PathVariable String name) {
         return userService.getUserProfile(name);
+    }
+
+    @GetMapping("/name/{name}")
+    public String getUserName(@PathVariable String name) {
+        return userService.getUserName(name);
     }
 
 }

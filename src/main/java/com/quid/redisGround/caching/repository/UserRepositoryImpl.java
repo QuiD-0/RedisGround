@@ -21,4 +21,9 @@ public class UserRepositoryImpl implements UserRepository {
             });
     }
 
+    @Override
+    public UserProfile getUserProfileFromTemp(String name) {
+        return userTempRepository.getUserProfile(name);
+    }
+
 }
