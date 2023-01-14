@@ -1,4 +1,4 @@
-package com.quid.redisGround;
+package com.quid.redisGround.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.Duration;

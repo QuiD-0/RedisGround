@@ -1,6 +1,6 @@
 package com.quid.redisGround.caching.repository;
 
-import com.quid.redisGround.RedisBase;
+import com.quid.redisGround.config.RedisBase;
 import com.quid.redisGround.caching.dto.UserProfile;
 import java.time.Duration;
 import java.util.Optional;
