@@ -18,7 +18,7 @@ public class UserService {
 
     @Cacheable(value = "userProfile", key = "#name")
     public String getUserName(String name) {
-        return userRepository.getUserProfileFromTemp(name).getName();
+        return userRepository.getUserProfileFromTemp(name).name();
     }
 
 

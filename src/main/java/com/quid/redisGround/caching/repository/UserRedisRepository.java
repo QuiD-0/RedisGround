@@ -1,7 +1,7 @@
 package com.quid.redisGround.caching.repository;
 
-import com.quid.redisGround.config.RedisBase;
 import com.quid.redisGround.caching.dto.UserProfile;
+import com.quid.redisGround.config.RedisBase;
 import java.time.Duration;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ public class UserRedisRepository {
 
 
     public void saveUserProfile(UserProfile userProfile) {
-        redisBase.save(userProfile.getName(), userProfile, Duration.ofSeconds(10));
+        redisBase.save(userProfile.name(), userProfile, Duration.ofSeconds(10));
     }
 
 }
