@@ -16,7 +16,7 @@ public class OrderController {
 
     @GetMapping("/order")
     public String order(OrderCreateReq orderCreateReq) {
-        redisTemplate.opsForStream().add("order-event", orderCreateReq.toMap());
+        redisTemplate.opsForStream().add("order-events", orderCreateReq.toMap());
         log.info("order: {}", orderCreateReq);
         return "success";
     }
